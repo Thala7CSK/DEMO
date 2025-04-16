@@ -1,0 +1,44 @@
+ASS-2
+t-1
+idlj -fall ReverseModule.idl
+javac *.java ReverseModule/*.java
+orbd -ORBInitialPort 1056&
+java ReverseServer -ORBInitialPort 1056&
+
+t-2
+java ReverseClient -ORBInitialPort 1056 -ORBInitialHost localhost
+
+
+ASS-3
+javac -cp lib/mpj.jar -d bin src/Ass3/Assign3.java
+
+mpjrun.bat -np 4 -cp bin Ass3.Assign3
+
+
+ASS-4
+
+t-1
+python client.py
+
+t-2
+python server.py
+
+ASS-5
+javac Token_Ring.java
+java Token_Ring
+
+ASS-6
+javac Bully.java
+java Bully
+javac Ring.java
+java Ring
+
+Mini Project 
+java -cp bin server.UNOServer
+java -cp bin client.UNOClient
+
+
+
+
+
+
